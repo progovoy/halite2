@@ -32,6 +32,9 @@ while True:
     # TURN START
     # Update the map for the new turn and get the latest version
     game_map = game.update_map()
+    if game_map is None:
+        # no more updates
+        break
 
     # Here we define the set of commands to be sent to the Halite engine at the end of the turn
     command_queue = []
