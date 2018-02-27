@@ -15,9 +15,16 @@ import hlt
 # Then let's import the logging module so we can print out information
 import logging
 
+import sys
+sys.path.append('.')
+if len(sys.argv) > 1 and sys.argv[1] == "NODEBUG":
+    from hlt.networking import Game
+else:
+    from socketnetworking import Game
+
 # GAME START
 # Here we define the bot's name as Settler and initialize the game, including communication with the Halite engine.
-game = hlt.Game("Settler")
+game = Game("Settler")
 # Then we print our start message to the logs
 logging.info("Starting my Settler bot!")
 
