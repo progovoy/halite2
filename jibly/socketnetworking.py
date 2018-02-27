@@ -56,4 +56,3 @@ class Game(hlt.Game):
             self._send_string(command)
 
         self._done_sending()
-        
