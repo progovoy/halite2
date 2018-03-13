@@ -5,6 +5,7 @@
 	"author": "Fohristiwhirl",
 	"main": "main.js",
 	"dependencies": {
+		"electron": "^1.8.2",
 		"node-zstandard": "1.2.4"
 	},
 	"scripts": {
